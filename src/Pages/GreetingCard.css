@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.birthday-container {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Main Birthday Banner */
+.main-card {
+  width: 100%;
+  max-width: 700px;
+  height: 250px;
+  margin: 0 auto 40px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.main-card h1 {
+  color: white;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+/* Grid Layout */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Individual Card */
+.small-card {
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 300px; /* Increase this if needed */
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+  background-color: #f8f8f8;
+}
+
+.small-card p {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+/* Tablet */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-card {
+    height: 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-card {
+    height: 180px;
+  }
+
+  .main-card h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .card-image {
+    height: 250px;
+  }
+}
